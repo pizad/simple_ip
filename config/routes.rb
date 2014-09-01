@@ -17,6 +17,11 @@ SimpleIp::Application.routes.draw do
   # get "static_pages/privacy"
   match '/privacy', to: 'static_pages#privacy', via: :get
 
+  # get "static_pages/sign_up"
+  match '/sign_up', to: 'static_pages#sign_up', via: :get
+
+  # get "static_pages/sign_in"
+  match '/sign_in', to: 'static_pages#sign_in', via: :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
