@@ -5,11 +5,11 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 
-# Use postgresql as the database for Active Record
-gem 'pg'
-
-# Include 'rails_12factor gem per Heroku
-gem 'rails_12factor', group: :production
+# Include PostgreSQL and 'rails_12factor gem per Heroku
+group :production, :staging do
+      gem 'pg'
+      gem 'rails_12factor'
+    end
 
 # Use Bootstrap and SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.2.0.1'
