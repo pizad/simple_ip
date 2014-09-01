@@ -1,4 +1,51 @@
 <% provide(:title, 'Home') %>
 
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<h1>Welcome to Simple Patents</h1>
+
+<%= render 'static_pages/static_open' %>
+
+<h3>Discover. Organize. Share.</h3>
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		<a href="#" class="btn btn-primary btn-lg active" role="button">Join Now!</a>
+		<a href="#" class="btn btn-default btn-lg active" role="button">Sign In</a>
+	</div>
+</div>
+
+<p class="lead">We provide simple patent organization and visualization tools.</p>
+
+<p class="lead">You get unparalleled insight into your patent clusters.</p>
+
+<p class="lead">And, it's free (well, up to a point).</p>
+
+<p>The process is simple.  Just upload your list of patents or patent publications and use our tools to view a rich set of patent data.</p>
+
+<div class="row">
+	<div class="col-md-2">
+		<h4>Discover.</h4>
+	</div>
+	<div class="col-md-8">
+		<p>You provide the patents - even your own patent portfolio. We provide tools for insight.</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-2">
+		<h4>Organize.</h4>
+	</div>
+	<div class="col-md-8">
+		<p>Patents provide a huge amount of information.  You decide what information you want to see, and how you want to see it.</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-2">
+		<h4>Share.</h4>
+	</div>
+	<div class="col-md-8">
+		<p>Instead of dumping data into spreadsheets or attaching PDFs to emails, use our tools to share your patent information with others in your trusted network.</p>
+	</div>
+</div>
+
+<%= render 'static_pages/static_close' %>

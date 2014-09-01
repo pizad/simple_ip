@@ -13,6 +13,14 @@ body {
 	padding-right: 30px;
 }
 
+ul {
+	list-style-type: none;
+}
+
+ol {
+	top-margin: 50px;
+}
+
 section {
 	overflow: auto;
 }
@@ -55,14 +63,23 @@ h3 {
 	font-size: 1.5em;
 	letter-spacing: -1px;
 	margin-bottom: 30px;
-	text-align: left;
+	text-align: center;
 	font-weight: normal;
 	color: #999;
+}
+
+h4 {
+	font-size: 1.3em;
+	letter-spacing: -1px;
+	text-align: left;
+	font-weight: normal;
+	color: red;
 }
 
 p {
 	font-size: 1.1em;
 	line-height: 1.7em;
+	color: #696969;
 }
 
 .breadcrumb	{
@@ -93,4 +110,12 @@ p {
 #logo:hover {
 	color: #fff;
 	text-decoration: none;
+}
+
+.panel-body {
+	text-align: center;
+}
+
+.btn.btn-primary.btn-lg.active	{
+	background-color: red;
 }
