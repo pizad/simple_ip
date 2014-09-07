@@ -24,12 +24,12 @@ end
 # Use Uglifier as compressor for JavaScript assets
 # Use CoffeeScript for .js.coffee assets and views
 group :assets do
-	gem 'bootstrap-sass', '2.3.2.0'
-	gem 'sass-rails', '>= 3.2'
+	gem 'bootstrap-sass', '2.3.2'
+	gem 'sass-rails', '4.0.3'
 	gem 'sprockets', '2.11.0'
 	gem 'autoprefixer-rails'
-	gem 'uglifier', '>= 1.3.0'
-	gem 'coffee-rails', '~> 4.0.0'
+	gem 'uglifier', '2.1.1'
+	gem 'coffee-rails', '4.0.1'
 end
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
