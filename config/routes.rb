@@ -1,16 +1,18 @@
 SimpleIp::Application.routes.draw do
 
   # User controller routes
-  match '/new',       to: 'users#new',             via: :get
-  match '/sign_in',   to: 'users#sign_in',         via: :get
+  resources :users
+  match '/signup',    to: 'users#new',          	via: :get
+  match '/sign_in',   to: 'users#sign_in',        	via: :get
+  match '/show',	  to: 'users#show',				via: :get
 
   # Static_Pages controller routes
   root to: 'static_pages#home'
-  match '/about',     to: 'static_pages#about',    via: :get
-  match '/contact',   to: 'static_pages#contact',  via: :get
-  match '/faq',       to: 'static_pages#faq',      via: :get
-  match '/terms',     to: 'static_pages#terms',    via: :get
-  match '/privacy',   to: 'static_pages#privacy',  via: :get
+  match '/about',     to: 'static_pages#about',    	via: :get
+  match '/contact',   to: 'static_pages#contact',  	via: :get
+  match '/faq',       to: 'static_pages#faq',      	via: :get
+  match '/terms',     to: 'static_pages#terms',    	via: :get
+  match '/privacy',   to: 'static_pages#privacy',  	via: :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

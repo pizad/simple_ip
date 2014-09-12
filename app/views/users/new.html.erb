@@ -8,4 +8,22 @@
 
 <p>If you would like to be notified when we move to open beta or production mode, please <%= link_to "contact", contact_path %> us.  Thank you for your interest!</p>
 
+<%= form_for(@user) do |f| %>
+	<%= render 'shared/error_messages' %>
+	<br>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<br>
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+	<br>
+	<%= f.label :password %>
+	<%= f.password_field :password %>
+	<br>
+	<%= f.label :password_confirmation, "Confirmation" %>
+	<%= f.password_field :password_confirmation %>
+	<br>
+	<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+<% end %>
+
 <%= render 'users/users_close' %>
