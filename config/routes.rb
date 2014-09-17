@@ -3,8 +3,12 @@ SimpleIp::Application.routes.draw do
   # User controller routes
   resources :users
   match '/signup',    to: 'users#new',          	via: :get
-  match '/sign_in',   to: 'users#sign_in',        	via: :get
   match '/show',	  to: 'users#show',				via: :get
+
+  # Session controller routes
+  resources :sessions, only: [:new, :create, :destroy]
+  match '/sign_in',   to: 'sessions#new',   		via: :get
+  match '/signout',   to: 'sessions#destroy',     	via: :delete
 
   # Static_Pages controller routes
   root to: 'static_pages#home'

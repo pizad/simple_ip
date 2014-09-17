@@ -1,17 +1,15 @@
 <% provide(:title, 'Home') %>
 
-<h1>Welcome to Simple IP<small>.beta</small></h1>
+<div class="jumbotron">
+	<h1>Welcome to Simple IP<small>.beta</small></h1>
 
-<%= render 'static_pages/static_open' %>
+	<%= render 'static_pages/static_open' %>
 
-<h3>Discover. Organize. Share.</h3>
-
-<div class="panel panel-default">
-	<div class="panel-body">
-		<%= link_to "Join Now!", signup_path, class: "btn btn-primary btn-lg active" %>
-		<%= link_to "Sign In", sign_in_path, class: "btn btn-default btn-lg active" %>
-	</div>
+	<h3>Discover. Organize. Share.</h3>
+	<%= link_to "Join Now!", signup_path, class: "btn btn-primary btn-lg active" %>
+	<%= link_to "Sign In", sign_in_path, class: "btn btn-default btn-lg active" %>
 </div>
+
 
 <!--
 <p class="lead">We provide simple patent organization and visualization tools.</p>

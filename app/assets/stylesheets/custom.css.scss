@@ -3,10 +3,12 @@
 
 /* mixins, variables, etc */
 
-$red: #d80000;
-$lightgray: #999;
+$asphalt: #555;
+$black: #222;
+$red: #f00f00;
+$lightGray: #999;
 $grayMediumLight: #eaeaea;
-$darkgray: #696969;
+$darkGray: #696969;
 $white: #fff;
 
 @mixin box_sizing {
@@ -22,7 +24,7 @@ html {
 }
 
 body {
-	padding-top: 0px;
+	padding-top: 70px;
 	padding-left: 30px;
 	padding-right: 30px;
 }
@@ -50,6 +52,37 @@ textarea {
 	}
 }
 
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $lightGray;
+}
+
+footer a {
+  color: $asphalt;
+}
+
+footer a:hover {
+  color: $black;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -69,7 +102,7 @@ h2 {
 	margin-bottom: 15px;
 	text-align: center;
 	font-weight: normal;
-	color: $lightgray;
+	color: $lightGray;
 }
 
 h3 {
@@ -78,7 +111,7 @@ h3 {
 	margin-bottom: 30px;
 	text-align: center;
 	font-weight: normal;
-	color: $lightgray;
+	color: $lightGray;
 }
 
 h4 {
@@ -92,7 +125,7 @@ h4 {
 p {
 	font-size: 1.1em;
 	line-height: 1.7em;
-	color: $darkgray;
+	color: $darkGray;
 }
 
 .breadcrumb	{
@@ -104,6 +137,11 @@ p {
 .nav.nav-pills	{
 	margin-top: 15px;
 	margin-bottom: 15px;
+	text-align: center;
+}
+
+.dropdown-menu.dropdown-menu-right {
+	margin-right: 98px;
 }
 
 /* header using SASS nesting */
@@ -119,6 +157,7 @@ p {
 	font-weight: bold;
 	line-height: 1;
 	&:hover {
+		color: white;
 		text-decoration: none;
 	}
 }
@@ -144,7 +183,7 @@ p {
 /* forms */
 
 #error_explanation {
-  color: #f00;
+  color: $red;
   ul {
     list-style: none;
     margin: 0 0 18px 0;

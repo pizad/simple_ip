@@ -1,0 +1,28 @@
+<% provide(:title, 'Sign In') %>
+
+<h1>Sign In</h1>
+
+<%= render 'users/users_open' %>
+
+<p>We are in closed beta.  If you have an account with us, please log in below.</p>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(:session, url: sessions_path) do |f| %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+    <% end %>
+
+    <!--
+    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    -->
+  </div>
+</div>
+
+<%= render 'users/users_close' %>

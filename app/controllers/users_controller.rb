@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   def create
   	@user = User.new(user_params)
   	if @user.save
+  		sign_in @user
   		flash[:success] = "Welcome to Simple IP!"
   		redirect_to @user
   	else
@@ -25,7 +26,7 @@ class UsersController < ApplicationController
                                    :password_confirmation)
     end
 
-  def sign_in
-  end
+  # def sign_in
+  # end
 
 end
