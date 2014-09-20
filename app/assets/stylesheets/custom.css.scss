@@ -57,7 +57,7 @@ textarea {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
+  border-top: 1px solid;
   color: $lightGray;
 }
 
@@ -66,7 +66,8 @@ footer a {
 }
 
 footer a:hover {
-  color: $black;
+  color: $lightGray;
+  text-decoration: none;
 }
 
 footer small {
@@ -150,14 +151,14 @@ p {
 	float: left;
 	margin-right: 10px;
 	font-size: 1.7em;
-	color: $white;
-	text-transform: uppercase;
+	color: $darkGray;
+	/* text-transform: lowercase; */
 	letter-spacing: -1px;
-	padding-top: 9px;
+	padding-top: 12px;
 	font-weight: bold;
 	line-height: 1;
 	&:hover {
-		color: white;
+		color: $lightGray;
 		text-decoration: none;
 	}
 }
@@ -166,8 +167,11 @@ p {
 	text-align: center;
 }
 
-.btn.btn-primary.btn-lg.active	{
+.btn.btn-default.btn-lg.active {
 	background-color: $red;
+}
+.btn.btn-primary.btn-lg.active {
+	background-color: $lightGray;
 }
 
 /* debug style */

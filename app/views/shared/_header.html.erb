@@ -1,13 +1,17 @@
 <header>
-	<nav class="nav navbar-nav navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+	<nav class="nav navbar-nav navbar-default navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
-			<%= link_to "Simple IP", root_path, id: "logo" %>
+			<%= link_to "simple IP (beta)", root_path, id: "logo" %>
 
 			<ul class="nav navbar-nav navbar-right" role="menu">
+				<!--
 				<li role="presentation"><%= link_to "Home", root_path %></li>
 				<li role="presentation"><%= link_to "FAQ", faq_path %></li>
+				<li><%= link_to "Users", '#' %></li>
+				-->
+
 				<% if signed_in? %>
-					<li><%= link_to "Users", '#' %></li>
+
 					<!-- dropdown needs to be fixed
 					<div class="nav navbar-nav">
 
@@ -18,7 +22,7 @@
             		<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
             		-->
                 		<li role="presentation"><%= link_to "Profile", current_user %></li>
-                		<li role="presentation"><%= link_to "Settings", '#' %></li>
+                		<li role="presentation"><%= link_to "Settings", edit_user_path(current_user) %></li>
                 		<li role="presentation" class="divider"></li>
                 		<li role="presentation">
                   			<%= link_to "Sign out", signout_path, method: "delete" %>
