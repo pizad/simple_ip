@@ -1,13 +1,18 @@
 SimpleIp::Application.routes.draw do
 
   # User controller routes
-  resources :users
-  match '/signup',    to: 'users#new',          	via: :get
-  match '/show',	  to: 'users#show',				via: :get
+  resources :users do
+  	member do
+  		get 'user_home_page'
+  	end
+  end
+  match '/signup',    		to: 'users#new',          	via: :get
+  match '/show',	  		to: 'users#show',			via: :get
+  match '/:id/userhome',	to: 'users#userhome',	via: :get
 
   # Session controller routes
   resources :sessions, only: [:new, :create, :destroy]
-  match '/sign_in',   to: 'sessions#new',   		via: :get
+  match '/signin',    to: 'sessions#new',   		via: :get
   match '/signout',   to: 'sessions#destroy',     	via: :delete
 
   # Static_Pages controller routes

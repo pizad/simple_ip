@@ -110,7 +110,7 @@ h3 {
 	font-size: 1.5em;
 	letter-spacing: -1px;
 	margin-bottom: 30px;
-	text-align: center;
+	text-align: left;
 	font-weight: normal;
 	color: $lightGray;
 }
@@ -167,10 +167,10 @@ p {
 	text-align: center;
 }
 
-.btn.btn-default.btn-lg.active {
+.btn.btn-default.btn-lg {
 	background-color: $red;
 }
-.btn.btn-primary.btn-lg.active {
+.btn.btn-primary.btn-lg {
 	background-color: $lightGray;
 }
 

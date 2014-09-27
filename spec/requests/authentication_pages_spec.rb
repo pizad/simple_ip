@@ -5,14 +5,14 @@ describe "Authentication" do
   subject { page }
 
   describe "sign_in page" do
-    before { visit sign_in_path }
+    before { visit signin_path }
 
     it { should have_content('Sign In') }
-    it { should have_title('Sign In') }
+    it { should have_title('Simple IP | Sign In') }
   end
 
   describe "sign_in" do
-    before { visit sign_in_path }
+    before { visit signin_path }
 
     describe "with invalid information" do
       before { click_button "Sign in" }
@@ -39,7 +39,7 @@ describe "Authentication" do
       it { should have_link('Profile',     href: user_path(user)) }
       it { should have_link('Settings',    href: edit_user_path(user)) }
       it { should have_link('Sign out',    href: signout_path) }
-      it { should_not have_link('Sign in', href: sign_in_path) }
+      it { should_not have_link('Sign in', href: signin_path) }
 
       describe "followed by signout" do
         before { click_link "Sign out" }
@@ -62,7 +62,7 @@ describe "Authentication" do
 
         describe "submitting to the update action" do
           before { patch user_path(user) }
-          specify { expect(response).to redirect_to(sign_in_path) }
+          specify { expect(response).to redirect_to(signin_path) }
         end
       end
 

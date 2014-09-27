@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
-before_action :signed_in_user, only: [:edit, :update]
-before_action :correct_user,   only: [:edit, :update]
+before_action :signed_in_user, only: [:edit, :update, :user_home]
+before_action :correct_user,   only: [:edit, :update, :user_home]
 
   def show
   	@user = User.find(params[:id])
@@ -21,6 +21,10 @@ before_action :correct_user,   only: [:edit, :update]
   	end
   end
 
+  def user_home_page
+  	@user = User.find(params[:id])
+  end
+
   def edit
   end
 
@@ -29,7 +33,7 @@ before_action :correct_user,   only: [:edit, :update]
       flash[:success] = "Profile updated"
       redirect_to @user
     else
-      render 'edit'
+      render 'edit'  # this renders the edit view
     end
   end
 
@@ -45,7 +49,7 @@ before_action :correct_user,   only: [:edit, :update]
     def signed_in_user
       unless signed_in?
         store_location
-      	redirect_to sign_in_url, notice: "Please sign in."
+      	redirect_to signin_url, notice: "Please sign in."
       end
     end
 
