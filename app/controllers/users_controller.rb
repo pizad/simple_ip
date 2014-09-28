@@ -12,6 +12,7 @@ before_action :correct_user,   only: [:edit, :update, :user_home]
   end
 
   def create
+  	@user = User.new(user_params)
   	if @user.save
   		sign_in @user
   		flash[:success] = "Welcome to Simple IP!"
