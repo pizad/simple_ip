@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
-before_action :signed_in_user, only: [:edit, :update, :user_home]
-before_action :correct_user,   only: [:edit, :update, :user_home]
+before_action :signed_in_user, only: [:edit, :update, :user_home_page]
+before_action :correct_user,   only: [:edit, :update, :user_home_page]
 
   def show
   	@user = User.find(params[:id])
@@ -20,10 +20,6 @@ before_action :correct_user,   only: [:edit, :update, :user_home]
   	else
   		render 'new'
   	end
-  end
-
-  def user_home_page
-  	@user = User.find(params[:id])
   end
 
   def edit
@@ -47,12 +43,12 @@ before_action :correct_user,   only: [:edit, :update, :user_home]
 
     # Before filters
 
-    def signed_in_user
-      unless signed_in?
-        store_location
-      	redirect_to signin_url, notice: "Please sign in."
-      end
-    end
+    # def signed_in_user
+      # unless signed_in?
+        # store_location
+      	# redirect_to signin_url, notice: "Please sign in."
+      # end
+    # end
 
     def correct_user
       @user = User.find(params[:id])

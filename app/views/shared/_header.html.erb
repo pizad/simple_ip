@@ -21,9 +21,9 @@
               			</a>
             		<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
             		-->
-                		<li role="presentation"><%= link_to "My Home Page", user_home_page_user_path %></li>
-                		<li role="presentation"><%= link_to "User Profile", current_user %></li>
-                		<li role="presentation"><%= link_to "Edit Profile", edit_user_path(current_user) %></li>
+                		<li role="presentation"><%= link_to "My Home Page", root_url %></li>
+                		<li role="presentation"><%= link_to "My Profile", current_user %></li>
+                		<li role="presentation"><%= link_to "Edit My Profile", edit_user_path(current_user) %></li>
                 		<li role="presentation" class="divider"></li>
                 		<li role="presentation">
                   			<%= link_to "Sign out", signout_path, method: "delete" %>
